@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Wonderland</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<h1>Christmas Wonderland</h1>
+<nav class="navbar">
+    <!-- hides after user creates an account/logs into an account -->
+    {% if not username %}
+    <a href="/login"><i class="fa-solid fa-user"></i><span>Log in</span></a>
+    {% else %}
+    <a href="/logout"><i class="fa-solid fa-circle-user"></i><span>Log out</span></a>
+    {% endif %}
+    <!-- when hovered over, this will use <i class="fa-solid fa-calendar-check"></i> -->
+    <a href="booking.html"><i class="fa-regular fa-calendar-check"></i><span>Booking</span></a>
+    <a href="attractions.html"><i class="fa-solid fa-snowman"></i><span>Attractions</span></a>
+    <a href="/contact"><i class="fa-solid fa-phone"></i><span>Contact</span></a>
+    <!-- {% if username %}
+    <a href="/logout"><span>Log Out</span></a>
+    {% else %}
+    <a href="/login"><i class="fa-regular fa-circle-user"></i><span>Log In</span></a>
+    {% endif %} -->
+</nav>
+{% block content %}{% endblock %}
+<footer>
+    <p>&copy; 2026 Christmas Wonderland. All rights reserved.</p>
+</footer>
+</body>
+</html>
+<script src="https://kit.fontawesome.com/49479a09cf.js" crossorigin="anonymous"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>

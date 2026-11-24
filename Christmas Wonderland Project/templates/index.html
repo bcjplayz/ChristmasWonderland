@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Christmas Wonderland | Home{% endblock %}
+{% block content %}
+    {% if not username %}
+    <h1>Welcome to our Christmas Wonderland Website!</h1>
+    {% else %}
+    <h1>Welcome to our Christmas Wonderland Website, {{ username.username }}!</h1>
+    {% endif %}
+
+    <p>
+        Christmas is coming! Join us for a magical experience in our Christmas Wonderland,
+        where the magic of the season comes alive! Explore our enchanting attractions,
+        from dazzling light displays to festive activities for the whole family.
+    </p>
+
+    <p>
+        
+    </p>
+{% endblock %}
